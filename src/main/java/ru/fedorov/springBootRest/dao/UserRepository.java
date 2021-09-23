@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import ru.fedorov.springBootRest.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>, UserRepositoryCustom {
+public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
+    User findByEmail(String email);
 }
